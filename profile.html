@@ -1,0 +1,30 @@
+<!-- ===== profile.html ===== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CyberSafe | Profile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="profile-box">
+    <h2>👤 My Profile</h2>
+    <p><strong>Name:</strong> <span id="pname"></span></p>
+    <p><strong>Email:</strong> <span id="pemail"></span></p>
+    <p><strong>College:</strong> <span id="pcollege"></span></p>
+    <p><strong>Gender:</strong> <span id="pgender"></span></p>
+    <a href="index.html" class="btn">Go to Dashboard</a>
+  </div>
+
+<script>
+const user=JSON.parse(localStorage.getItem('cybersafeUser'));
+if(!user) window.location.href='login.html';
+pname.innerText=user.name;
+pemail.innerText=user.email;
+pcollege.innerText=user.college;
+pgender.innerText=user.gender;
+</script>
+</body>
+</html>
+
+

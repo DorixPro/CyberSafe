@@ -1,0 +1,47 @@
+<!-- =========================
+ ADDITIONAL FILES BELOW
+ Fake Login + Profile (TryHackMe style)
+========================= -->
+
+<!-- ===== login.html ===== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CyberSafe | Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-body">
+  <div class="login-box">
+    <h2>CyberSafe Login</h2>
+    <form onsubmit="saveUser(event)">
+      <input type="text" id="name" placeholder="Full Name" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <input type="text" id="college" placeholder="College Name" required>
+      <select id="gender" required>
+        <option value="">Select Gender</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+      <button type="submit">Verify & Login</button>
+    </form>
+  </div>
+
+<script>
+function saveUser(e){
+  e.preventDefault();
+  const user={
+    name: name.value,
+    email: email.value,
+    college: college.value,
+    gender: gender.value
+  };
+  localStorage.setItem('cybersafeUser', JSON.stringify(user));
+  window.location.href='profile.html';
+}
+</script>
+</body>
+</html>
+
