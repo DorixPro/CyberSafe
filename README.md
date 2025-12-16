@@ -45,8 +45,8 @@ CyberSafe does **not perform real hacking** and does **not collect real user dat
 
 ## 👨‍💻 Author
 
-**Rahul**
-BTech CSE (Cyber Security)
+**Rahul Choudhary**
+
 
 > *"Hack to learn, not to harm."*
 
